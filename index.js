@@ -10,6 +10,7 @@ import locationRoutes from './routes/location.routes.js'
 import attendanceRoutes from './routes/attendance.routes.js'
 import userRoutes from './routes/users.routes.js'
 import logsRoutes from  './routes/logs.routes.js'
+import facialRecognitionRoutes from './routes/faceRecognition.routes.js';
 
 
 
@@ -44,6 +45,9 @@ app.use('/api/attendance', attendanceRoutes);
 app.use('/api/users', userRoutes);
 
 app.use('/api/logs', logsRoutes);
+
+app.use('/api/face-recognition', facialRecognitionRoutes);
+
 
 app.get('*', (req,res) => {
     res.send('Invalid route or URL')
